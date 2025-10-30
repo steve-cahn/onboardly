@@ -7,8 +7,8 @@ import "./styles/animations.css";
 
 
 export const metadata = {
-  title: "RVS Onboarding",
-  description: "Customizable onboarding wizard (RVS exercise)",
+  title: "OnBoardly",
+  description: "Customizable onboarding wizard",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

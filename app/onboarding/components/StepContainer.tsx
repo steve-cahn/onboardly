@@ -27,7 +27,7 @@ export default function StepContainer({
         <StepOneForm
           data={formData}
           setData={setFormData}
-          onNext={(u) => {
+          onNext={(u: User) => {
             setUser(u);
             toast.success("Step 1 complete!");
             triggerFade(() => setStep(2));
