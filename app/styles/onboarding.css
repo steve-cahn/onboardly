@@ -1,0 +1,95 @@
+.onboard-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 40px 32px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.onboard-title {
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.onboard-sub {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+}
+
+.onboard-sub a {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+/* Step Tracker */
+.step-tracker {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.step {
+    text-align: center;
+    flex: 1;
+}
+
+.step .circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--border);
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin: 0 auto 8px;
+    transition: all 0.25s ease;
+}
+
+.step.active .circle,
+.step.done .circle {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 0 12px var(--accent);
+}
+
+.step span {
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.logout-container {
+    text-align: right;
+    margin-top: 24px;
+}
+
+/* Section Blocks */
+.section-block {
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+}
+
+.section-block h2 {
+    color: var(--text);
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+
+.section-block .subtext {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    margin-top: 20px;
+}

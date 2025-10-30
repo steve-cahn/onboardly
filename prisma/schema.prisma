@@ -1,0 +1,35 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String    @id @default(cuid())
+  email     String    @unique
+  password  String
+  progress  Int       @default(1) // 1=Step1, 2=Step2, 3=Step3 (completed after saving step)
+  aboutMe   String?
+  street    String?
+  city      String?
+  state     String?
+  zip       String?
+  birthdate DateTime?
+  createdAt DateTime  @default(now())
+}
+
+model Config {
+  id        Int      @id @default(1)
+  step2     String[] // e.g. ["aboutMe","birthdate"]
+  step3     String[] // e.g. ["address"]
+  updatedAt DateTime @updatedAt
+}

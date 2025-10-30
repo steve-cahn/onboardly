@@ -1,0 +1,117 @@
+.data-container {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px 24px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.data-container h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.data-container .help {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--panel);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.table th {
+    background: #f3f4f6;
+    /* light gray header */
+    color: #374151;
+    /* dark gray text */
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+.table td {
+    background: #ffffff;
+    /* white rows */
+    color: #1f2937;
+    /* readable dark gray */
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.table tr:hover td {
+    background: #f9fafb;
+    /* subtle hover */
+}
+
+.table td:first-child,
+.table th:first-child {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.table td:last-child,
+.table th:last-child {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+/* Refresh Button */
+button {
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+button.primary {
+    background: var(--accent);
+    border: 1px solid var(--accent);
+    color: #fff;
+}
+
+button.primary:hover {
+    background: #2563eb;
+}
+
+button.secondary {
+    background: #fff;
+    border: 1px solid var(--border);
+    color: var(--text);
+}
+
+button.secondary:hover {
+    background: #f3f4f6;
+    border-color: var(--accent);
+}
+
+
+@media (max-width: 768px) {
+    .table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .table th,
+    .table td {
+        padding: 10px;
+    }
+}
